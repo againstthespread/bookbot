@@ -17,3 +17,14 @@ def character_count(text):
         else:
             char_count[char] = 1
     return char_count
+
+def sort_char_counts(char_dict):
+    # Filter to keep only alphanumeric characters
+    filtered_items = [(char, count) for char, count in char_dict.items() if char.isalpha()]
+    # Sort by count descending using .sort()
+    filtered_items.sort(key=lambda x: x[1], reverse=True)
+    # Convert back to dictionary if needed
+    sorted_dict = dict(filtered_items)
+    return sorted_dict
+
+
