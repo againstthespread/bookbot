@@ -3,15 +3,13 @@ import sys
 import os
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python main.py books/<book_filename.txt>")
-        return
     
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
     path = sys.argv[1]
 
-    if not os.path.exists(path):
-        print(f"Error: File not found at path '{path}'")
-        return
     print("============ BOOKBOT ===========")
     print("Analyzing book found at {path}...")
     print("----------- Word Count ----------")
