@@ -4,8 +4,7 @@ def get_book_text(path_to_file):
         file_contents2 = file_contents.lower()
         return file_contents2
 
-def word_count():
-    text = get_book_text("books/frankenstein.txt")
+def word_count(text):
     words = text.split()
     return len(words)
 
